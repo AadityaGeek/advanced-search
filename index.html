@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Advanced Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-blue">G</span><span class="logo-red">o</span><span class="logo-yellow">o</span><span class="logo-blue">g</span><span class="logo-green">l</span><span class="logo-red">e</span>
+            <span class="advanced-text">Advanced Search</span>
+        </div>
+        <div class="creator">Created by <a href="https://www.linkedin.com/in/aadityakr/" target="_blank">Aaditya</a></div>
+    </header>
+
+    <div class="container">
+        <main>
+            <form id="advanced-search-form" action="https://www.google.com/search" method="get">
+                <div class="form-section">
+                    <h2>Search Settings</h2>
+                    
+                    <div class="form-group">
+                        <label>Search type</label>
+                        <div class="input-area radio-area">
+                            <div class="radio-item">
+                                <input type="radio" id="web-search" name="search-type" value="web" checked>
+                                <label for="web-search">Web Search</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="image-search" name="search-type" value="image">
+                                <label for="image-search">Image Search</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="search-query">Search terms</label>
+                        <div class="input-area">
+                            <div class="input-wrapper">
+                                <input type="text" id="search-query" name="q" placeholder="Enter your search terms">
+                                <i class="fas fa-times clear-input" data-target="search-query"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Search options</label>
+                        <div class="input-area checkbox-area">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="exact-match" name="exact-match" class="exclusive-checkbox">
+                                <label for="exact-match">Exact phrase match</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="define-search" name="define-search" class="exclusive-checkbox">
+                                <label for="define-search">Define word/phrase</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="site-search">Site or domain</label>
+                        <div class="input-area">
+                            <div class="input-wrapper">
+                                <input type="text" id="site-search" name="site" placeholder="e.g., wikipedia.org">
+                                <i class="fas fa-times clear-input" data-target="site-search"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exclude-words">Exclude words</label>
+                        <div class="input-area">
+                            <div class="input-wrapper">
+                                <input type="text" id="exclude-words" name="exclude" placeholder="Words to exclude from results">
+                                <i class="fas fa-times clear-input" data-target="exclude-words"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="filetype-section">
+                        <label for="filetype">File type</label>
+                        <div class="input-area">
+                            <select id="filetype" name="filetype">
+                                <option value="">Any format</option>
+                                <option value="pdf">PDF</option>
+                                <option value="doc">DOC</option>
+                                <option value="docx">DOCX</option>
+                                <option value="xls">XLS</option>
+                                <option value="xlsx">XLSX</option>
+                                <option value="ppt">PPT</option>
+                                <option value="pptx">PPTX</option>
+                                <option value="txt">TXT</option>
+                                <option value="html">HTML</option>
+                                <option value="xml">XML</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="image-filters" class="form-group hidden">
+                        <label>Image type</label>
+                        <div class="input-area checkbox-grid">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-clipart" name="img-clipart">
+                                <label for="img-clipart">Clipart</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-drawing" name="img-drawing">
+                                <label for="img-drawing">Drawing</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-transparent" name="img-transparent">
+                                <label for="img-transparent">Transparent</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-vector" name="img-vector">
+                                <label for="img-vector">Vector</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-photo" name="img-photo">
+                                <label for="img-photo">Photograph</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-lineart" name="img-lineart">
+                                <label for="img-lineart">Line Art</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-face" name="img-face">
+                                <label for="img-face">Face</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="img-animated" name="img-animated">
+                                <label for="img-animated">Animated (GIF)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <button type="submit" id="search-button">Advanced Search</button>
+                </div>
+            </form>
+        </main>
+        
+        <section class="info-section">
+            <h2 class="section-title">About Advanced Google Search</h2>
+            <p class="section-description">Enhance your search experience with powerful advanced search options to find exactly what you're looking for.</p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-search-plus card-icon"></i>
+                    <h3>Precise Search</h3>
+                    <p>Use exact phrase matching and word exclusion to get more accurate results. Perfect for finding specific quotes or content.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-file-alt card-icon"></i>
+                    <h3>File Type Search</h3>
+                    <p>Filter results by specific file types like PDF, DOC, PPT, or any other format to find exactly the type of content you need.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-globe card-icon"></i>
+                    <h3>Site-Specific Search</h3>
+                    <p>Limit your search to specific websites or domains. Great for searching within educational institutions or trusted sources.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-images card-icon"></i>
+                    <h3>Image Search Filters</h3>
+                    <p>Find the perfect image with filters for clipart, photographs, transparent backgrounds, and more.</p>
+                </div>
+            </div>
+
+            <div class="usage-section">
+                <h2 class="section-title">How to Use</h2>
+                <div class="usage-steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <p>Select your search type (Web or Image)</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <p>Enter your search terms and apply any desired filters</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <p>Click "Advanced Search" to see results on Google</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-contact">
+                <h2 class="section-title">Connect With Us</h2>
+                <div class="social-links">
+                    <a href="https://twitter.com/aadityakr_/" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/AadityaGeek/" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aadityakr/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:work.aadityakumar@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> Advanced Search</p>
+        </footer>
+    </div>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
