@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let imageTypeParams = [];
         
         if (searchType === 'image') {
-            // Construct image search URL and parameters
             if (document.getElementById('img-clipart').checked) {
                 imageTypeParams.push('itp:clipart');
             }
@@ -126,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 imageTypeParams.push('ic:trans');
             }
             if (document.getElementById('img-vector').checked) {
-                imageTypeParams.push('itp:animated');
+                imageTypeParams.push('itp:vector');
             }
             if (document.getElementById('img-photo').checked) {
                 imageTypeParams.push('itp:photo');
