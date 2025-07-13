@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageFiltersSection = document.getElementById('image-filters');
     const filetypeSection = document.getElementById('filetype-section');
     const searchTypeRadios = document.getElementsByName('search-type');
+    const searchOptionsGroup = document.getElementById('search-options-group');
     
     // Toggle image filters and filetype sections based on search type
     searchTypeRadios.forEach(radio => {
@@ -10,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.value === 'image') {
                 imageFiltersSection.classList.remove('hidden');
                 filetypeSection.classList.add('hidden');
+                searchOptionsGroup.classList.add('hidden'); // Hide checkboxes
             } else {
                 imageFiltersSection.classList.add('hidden');
                 filetypeSection.classList.remove('hidden');
+                searchOptionsGroup.classList.remove('hidden'); // Show checkboxes
             }
         });
     });
