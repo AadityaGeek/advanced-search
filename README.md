@@ -2,6 +2,14 @@
 
 A powerful and user-friendly web interface for performing advanced Google searches with enhanced filtering capabilities. This tool provides an intuitive way to utilize Google's advanced search features through a clean, modern interface.
 
+🌐 **Live Demo**: [aadityageek.github.io/advanced-search](https://aadityageek.github.io/advanced-search/)
+
+## 🎬 Video Demo & Feature Walkthrough
+
+Watch the 24-second feature walkthrough explaining each option, its benefits, and how the compiled search queries and results look:
+
+https://github.com/user-attachments/assets/c5556663-fc1d-4bf5-bd70-aba4389493fa
+
 ## Screenshots
 
 ### Desktop View
